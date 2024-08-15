@@ -1,5 +1,10 @@
-export default function ItemCard({name, price, star, image}) {
-    const starNum = Math.max(1, Math.min(parseInt(star, 10) || 1, 5))
+export default function ItemCard({name, price, star, image}: {
+    name: string,
+    price: string,
+    star: number,
+    image: string
+}) {
+    const starNum = Math.max(1, Math.min(star || 1, 5))
 
     return (
         <div className="col mb-5">

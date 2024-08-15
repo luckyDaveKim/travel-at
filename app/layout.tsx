@@ -3,9 +3,8 @@ import {Inter} from "next/font/google";
 import Head from "next/head";
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 
-// import '@/styles/reset.css'
-import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import './globals.css'
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 import BootstrapJs from "@/components/bootstrap/BootstrapJs";
 
 const inter = Inter({subsets: ["latin"]});
@@ -32,17 +31,9 @@ export default function RootLayout({
             <meta name="author" content=""/>
         </Head>
         <GoogleAnalytics/>
-        <BootstrapJs />
+        <BootstrapJs/>
         <body className={inter.className}>
-        {children}{/*
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Travel At 2024</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>*/}
+        {children}
         </body>
         </html>
     );

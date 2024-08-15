@@ -1,11 +1,8 @@
 'use client'
 
-import BootstrapJs from "@/components/bootstrap/BootstrapJs";
-
 export default function Navigation() {
     return (
         <>
-            {/*<BootstrapJs/>*/}
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container px-4 px-lg-5">
                     <a className="navbar-brand" href="/travel-at">Travel At</a>
