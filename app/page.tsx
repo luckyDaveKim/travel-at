@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -31,10 +32,10 @@ export default function Home() {
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">🇯🇵</div>
                             <h2 className="h4 fw-bolder">일본</h2>
                             <p>일본의 돈키호테 등에서 꼭 사야 할 인기 상품을 소개합니다. 쇼핑 리스트에 빠질 수 없는 현지 상품을 한눈에 확인하세요!</p>
-                            <a className="text-decoration-none" href="/japan/donki">
+                            <Link className="text-decoration-none" href="/japan/donki">
                                 추천 상품 보기
                                 <i className="bi bi-arrow-right"></i>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
