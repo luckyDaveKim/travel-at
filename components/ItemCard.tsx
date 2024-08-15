@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ItemCard({name, price, star, image}: {
     name: string,
     price: string,
@@ -9,7 +11,7 @@ export default function ItemCard({name, price, star, image}: {
     return (
         <div className="col mb-5">
             <div className="card h-100">
-                <img className="card-img-top" src={image} alt={name}/>
+                <Image className="card-img-top" src={image} alt={name} width={258} height={258}/>
                 <div className="card-body p-4">
                     <div className="text-center">
                         <h5 className="fw-bolder">{name}</h5>

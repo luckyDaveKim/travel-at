@@ -32,15 +32,16 @@ export default function Page() {
                 </div>
                 <div className="container px-4 px-lg-5 mt-5">
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                        <ItemCard name='곤약 젤리' price='¥259' star={5} image='/assets/item1.png'/>
-                        <ItemCard name='부르봉 알포트 초코' price='¥299' star={5} image='/assets/item2.png'/>
-                        <ItemCard name='부르봉 루만도' price='¥279' star={5} image='/assets/item3.png'/>
-                        <ItemCard name='파이노미' price='¥239' star={5} image='/assets/item4.png'/>
-                        <ItemCard name='랑그리' price='¥179' star={5} image='/assets/item5.png'/>
-                        <ItemCard name='푸딩 젤리' price='¥203' star={5} image='/assets/item6.png'/>
-                        <ItemCard name='크리미 치즈' price='¥259' star={5} image='/assets/item7.png'/>
-                        <ItemCard name='S&B 골든 카레' price='¥259' star={5} image='/assets/item8.png'/>
-                        <ItemCard name='산토리 위스키' price='¥1,500' star={5} image='/assets/item9.png'/>
+                        {/*TODO : travel-at 링크 제거*/}
+                        <ItemCard name='곤약 젤리' price='¥259' star={5} image='/travel-at/assets/item1.png'/>
+                        <ItemCard name='부르봉 알포트 초코' price='¥299' star={5} image='/travel-at/assets/item2.png'/>
+                        <ItemCard name='부르봉 루만도' price='¥279' star={5} image='/travel-at/assets/item3.png'/>
+                        <ItemCard name='파이노미' price='¥239' star={5} image='/travel-at/assets/item4.png'/>
+                        <ItemCard name='랑그리' price='¥179' star={5} image='/travel-at/assets/item5.png'/>
+                        <ItemCard name='푸딩 젤리' price='¥203' star={5} image='/travel-at/assets/item6.png'/>
+                        <ItemCard name='크리미 치즈' price='¥259' star={5} image='/travel-at/assets/item7.png'/>
+                        <ItemCard name='S&B 골든 카레' price='¥259' star={5} image='/travel-at/assets/item8.png'/>
+                        <ItemCard name='산토리 위스키' price='¥1,500' star={5} image='/travel-at/assets/item9.png'/>
                     </div>
                 </div>
             </section>
