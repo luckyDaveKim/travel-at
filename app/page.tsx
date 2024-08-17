@@ -5,8 +5,8 @@ export default function Home() {
     return (
         <>
             <Navigation/>
-            <header className="bg-dark py-5">
-                <div className="container px-5">
+            <header className="bg-dark py-3">
+                <div className="container px-4 px-lg-5 my-3">
                     <div className="row gx-5 justify-content-center">
                         <div className="col-lg-6">
                             <div className="text-center my-5">
@@ -31,8 +31,8 @@ export default function Home() {
                         <div className="col-lg-4 mb-5 mb-lg-0">
                             <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3">🇯🇵</div>
                             <h2 className="h4 fw-bolder">일본</h2>
-                            <p>일본의 돈키호테 등에서 꼭 사야 할 인기 상품을 소개합니다. 쇼핑 리스트에 빠질 수 없는 현지 상품을 한눈에 확인하세요!</p>
-                            <Link className="text-decoration-none" href="/japan/donki">
+                            <p>일본에서 꼭 사야 할 인기 상품을 소개합니다. 쇼핑 리스트에 빠질 수 없는 현지 상품을 한눈에 확인하세요!</p>
+                            <Link className="text-decoration-none" href="/japan">
                                 추천 상품 보기
                                 <i className="bi bi-arrow-right"></i>
                             </Link>
