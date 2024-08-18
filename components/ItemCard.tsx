@@ -1,11 +1,12 @@
 import Image from "next/image";
 
-export default function ItemCard({key, name, price, star, imageSrc}: {
+export default function ItemCard({key, name, price, star, imageSrc, blur}: {
     key: string,
     name: string,
     price?: string,
     star?: number,
-    imageSrc: any
+    imageSrc: any,
+    blur?: boolean,
 }) {
     const starNum = Math.max(1, Math.min(star || 1, 5))
 
@@ -16,7 +17,7 @@ export default function ItemCard({key, name, price, star, imageSrc}: {
                        src={imageSrc}
                        alt={name}
                        sizes="200px"
-                       placeholder="blur"
+                       placeholder={blur ? "blur" : undefined}
                 />
                 <div className="card-body p-4">
                     <div className="text-center">

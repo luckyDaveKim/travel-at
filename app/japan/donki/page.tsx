@@ -46,7 +46,7 @@ export default function Page() {
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                         {data.map((item, i) => (
                             <ItemCard key={`item-card-${i}`} name={item.name} price={item.price} star={item.star}
-                                      imageSrc={item.imageSrc} />
+                                      imageSrc={item.imageSrc} blur={true} />
                         ))}
                     </div>
                 </div>
