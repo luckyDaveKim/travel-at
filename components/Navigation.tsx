@@ -21,6 +21,7 @@ export default function Navigation() {
                                    data-bs-toggle="dropdown" aria-expanded="false">일본</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" href="/japan/donki">돈키호테</Link></li>
+                                    <li><Link className="dropdown-item" href="/japan/fashion">패션</Link></li>
                                 </ul>
                             </li>
                         </ul>
