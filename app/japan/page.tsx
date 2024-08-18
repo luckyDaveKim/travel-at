@@ -17,13 +17,6 @@ class Tag {
         this.key = key;
         this.name = name;
     }
-
-    // 객체의 동등성을 비교하는 메서드
-    equals(other) {
-        return other instanceof Tag &&
-            this.key === other.key &&
-            this.name === other.name;
-    }
 }
 
 const TAGS = {
@@ -146,7 +139,7 @@ export default function Page() {
                             <nav aria-label="Pagination">
                                 <hr className="my-0" />
                                 <ul className="pagination justify-content-center my-4">
-                                    <li className={`page-item ${curPage === 1 && 'disabled'}`}><a className="page-link" href="#!" tabIndex="-1"
+                                    <li className={`page-item ${curPage === 1 && 'disabled'}`}><a className="page-link" href="#!"
                                                                           aria-disabled={curPage === 1} onClick={e => setCurPage(1)}>Newer</a></li>
                                     {range(1, maxPage + 1).map((pageNum) => (
                                         <li className={`page-item ${curPage === pageNum && 'active'}`} aria-current="page"><a className="page-link" href="#!" onClick={e => setCurPage(pageNum)}>{pageNum}</a></li>
