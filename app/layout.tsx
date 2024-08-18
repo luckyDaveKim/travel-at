@@ -1,6 +1,7 @@
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
 
 import './globals.css'
@@ -34,6 +35,7 @@ export default function RootLayout({
         <BootstrapJs/>
         <body className={inter.className}>
         {children}
+        <Analytics />
         </body>
         </html>
     );
