@@ -19,7 +19,7 @@ export default function Page() {
                             </div>
                         </div>
                         <div className="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
-                            <Image className="img-fluid rounded-3 my-5" src={japanImage} alt="일본" />
+                            <Image className="img-fluid rounded-3 my-5" src={japanImage} alt="일본" placeholder="blur" />
                         </div>
                     </div>
                 </div>

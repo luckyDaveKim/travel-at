@@ -3,23 +3,23 @@ import Navigation from "@/components/Navigation";
 
 export default function Page() {
     const data = [
-        {name: '샤넬', image: '/travel-at/assets/japan/fashion/chanel.svg'},
-        {name: '셀린느', image: '/travel-at/assets/japan/fashion/celine.svg'},
-        {name: '비비안 웨스트우드', image: '/travel-at/assets/japan/fashion/vivienne-westwood.svg'},
-        {name: '크롬하츠', image: '/travel-at/assets/japan/fashion/chrome-hearts.svg'},
-        {name: '꼼데가르송', image: '/travel-at/assets/japan/fashion/comme-des-garcons.svg'},
-        {name: '휴먼메이드', image: '/travel-at/assets/japan/fashion/human-made.svg'},
-        {name: '슈프림', image: '/travel-at/assets/japan/fashion/supreme.svg'},
-        {name: '메종키츠네', image: '/travel-at/assets/japan/fashion/maison-kitsune.svg'},
-        {name: '요시다 포터', image: '/travel-at/assets/japan/fashion/yoshida-porter.svg'},
-        {name: '보테가베네타', image: '/travel-at/assets/japan/fashion/bottega-veneta.svg'},
-        {name: '러쉬', image: '/travel-at/assets/japan/fashion/lush.svg'},
-        {name: '프라이탁', image: '/travel-at/assets/japan/fashion/freitag.svg'},
-        {name: '겐조', image: '/travel-at/assets/japan/fashion/kenzo.svg'},
-        {name: '단톤', image: '/travel-at/assets/japan/fashion/danton.svg'},
-        {name: '코스', image: '/travel-at/assets/japan/fashion/cos.svg'},
-        {name: '베이프', image: '/travel-at/assets/japan/fashion/bape.svg'},
-        {name: '메종 미하라 야스히로', image: '/travel-at/assets/japan/fashion/maison-mihara-yasuhiro.svg'}
+        {name: '샤넬', imageSrc: require('@/public/assets/japan/fashion/chanel.svg')},
+        {name: '셀린느', imageSrc: require('@/public/assets/japan/fashion/celine.svg')},
+        {name: '비비안 웨스트우드', imageSrc: require('@/public/assets/japan/fashion/vivienne-westwood.svg')},
+        {name: '크롬하츠', imageSrc: require('@/public/assets/japan/fashion/chrome-hearts.svg')},
+        {name: '꼼데가르송', imageSrc: require('@/public/assets/japan/fashion/comme-des-garcons.svg')},
+        {name: '휴먼메이드', imageSrc: require('@/public/assets/japan/fashion/human-made.svg')},
+        {name: '슈프림', imageSrc: require('@/public/assets/japan/fashion/supreme.svg')},
+        {name: '메종키츠네', imageSrc: require('@/public/assets/japan/fashion/maison-kitsune.svg')},
+        {name: '요시다 포터', imageSrc: require('@/public/assets/japan/fashion/yoshida-porter.svg')},
+        {name: '보테가베네타', imageSrc: require('@/public/assets/japan/fashion/bottega-veneta.svg')},
+        {name: '러쉬', imageSrc: require('@/public/assets/japan/fashion/lush.svg')},
+        {name: '프라이탁', imageSrc: require('@/public/assets/japan/fashion/freitag.svg')},
+        {name: '겐조', imageSrc: require('@/public/assets/japan/fashion/kenzo.svg')},
+        {name: '단톤', imageSrc: require('@/public/assets/japan/fashion/danton.svg')},
+        {name: '코스', imageSrc: require('@/public/assets/japan/fashion/cos.svg')},
+        {name: '베이프', imageSrc: require('@/public/assets/japan/fashion/bape.svg')},
+        {name: '메종 미하라 야스히로', imageSrc: require('@/public/assets/japan/fashion/maison-mihara-yasuhiro.svg')}
     ];
 
     return (
@@ -50,8 +50,8 @@ export default function Page() {
                 </div>
                 <div className="container px-4 px-lg-5 mt-5">
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                        {data.map((item) => (
-                            <ItemCard name={item.name} image={item.image} />
+                        {data.map((item, i) => (
+                            <ItemCard key={`item-card-${i}`} name={item.name} imageSrc={item.imageSrc} />
                         ))}
                     </div>
                 </div>
