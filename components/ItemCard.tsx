@@ -18,7 +18,7 @@ export default function ItemCard({key, name, price, star, imageSrc, blur}: {
                        alt={name}
                        width={200}
                        height={200}
-                       sizes="200px"
+                       sizes="100px"
                        placeholder={blur ? "blur" : undefined}
                 />
                 <div className="card-body p-4">
