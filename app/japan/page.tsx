@@ -130,8 +130,8 @@ export default function Page() {
 
                             <div
                                 className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                                {data.slice(maxItemSizeByPage * (curPage - 1), maxItemSizeByPage * (curPage - 1) + maxItemSizeByPage).map((item, i) => (
-                                    <ItemCard key={`item-card-${i}`} name={item.name} price={item?.price}
+                                {data.slice(maxItemSizeByPage * (curPage - 1), maxItemSizeByPage * (curPage - 1) + maxItemSizeByPage).map((item) => (
+                                    <ItemCard key={`item-card-${item.name}`} name={item.name} price={item?.price}
                                               star={item?.star}
                                               imageSrc={item.imageSrc} blur={item.blur} />
                                 ))}
@@ -139,8 +139,7 @@ export default function Page() {
                             <nav aria-label="Pagination">
                                 <hr className="my-0" />
                                 <ul className="pagination justify-content-center my-4">
-                                    <li className={`page-item ${curPage === 1 && 'disabled'}`}><a className="page-link" href="#!"
-                                                                          aria-disabled={curPage === 1} onClick={e => setCurPage(1)}>Newer</a></li>
+                                    <li className={`page-item ${curPage === 1 && 'disabled'}`}><a className="page-link" href="#!" aria-disabled={curPage === 1} onClick={e => setCurPage(1)}>Newer</a></li>
                                     {range(1, maxPage + 1).map((pageNum) => (
                                         <li className={`page-item ${curPage === pageNum && 'active'}`} aria-current="page"><a className="page-link" href="#!" onClick={e => setCurPage(pageNum)}>{pageNum}</a></li>
                                     ))}

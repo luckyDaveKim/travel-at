@@ -50,8 +50,8 @@ export default function Page() {
                 </div>
                 <div className="container px-4 px-lg-5 mt-5">
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                        {data.map((item, i) => (
-                            <ItemCard key={`item-card-${i}`} name={item.name} imageSrc={item.imageSrc} />
+                        {data.map((item) => (
+                            <ItemCard key={`item-card-${item.name}`} name={item.name} imageSrc={item.imageSrc} />
                         ))}
                     </div>
                 </div>
