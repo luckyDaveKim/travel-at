@@ -16,6 +16,8 @@ export default function ItemCard({key, name, price, star, imageSrc, blur}: {
                 <Image className="card-img-top"
                        src={imageSrc}
                        alt={name}
+                       width={200}
+                       height={200}
                        sizes="200px"
                        placeholder={blur ? "blur" : undefined}
                 />
