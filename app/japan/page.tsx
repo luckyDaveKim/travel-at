@@ -67,11 +67,16 @@ function getSearchedData(searchText: string) {
 }
 
 export default function Page() {
-    const [searchText, setSearchText] = useState('');
+    const [searchKeyword, setSearchKeyword] = useState('');
     const [curPage, setCurPage] = useState(1);
 
-    const data = getSearchedData(searchText)
+    const data = getSearchedData(searchKeyword)
     const maxPage = Math.ceil(data.length / maxItemSizeByPage)
+
+    const search = (keyword: string) => {
+        setSearchKeyword(keyword);
+        setCurPage(1);
+    }
 
     return (
         <>
@@ -152,9 +157,9 @@ export default function Page() {
                                 <div className="card-header">검색</div>
                                 <div className="card-body">
                                     <div className="input-group">
-                                        <input className="form-control" type="text" value={searchText} placeholder="무엇을 찾을까요?"
-                                               aria-label="무엇을 찾을까요?" aria-describedby="button-search" onChange={e => setSearchText(e.target.value)} />
-                                        <button className="btn btn-primary" id="button-search" type="button" onClick={e => setSearchText('')}>초기화</button>
+                                        <input className="form-control" type="text" value={searchKeyword} placeholder="무엇을 찾을까요?"
+                                               aria-label="무엇을 찾을까요?" aria-describedby="button-search" onChange={e => search(e.target.value)} />
+                                        <button className="btn btn-primary" id="button-search" type="button" onClick={e => search('')}>초기화</button>
                                     </div>
                                 </div>
                             </div>
@@ -164,12 +169,12 @@ export default function Page() {
                                     <div className="row">
                                         <div className="col-sm-6">
                                             <ul className="list-unstyled mb-0">
-                                                {tags.filter((_, i) => i % 2 === 0).map(tag => (<li><a key={`tag-${tag.key}`} href='#!' onClick={e => setSearchText(tag.name)}>{tag.name}</a></li>))}
+                                                {tags.filter((_, i) => i % 2 === 0).map(tag => (<li><a key={`tag-${tag.key}`} href='#!' onClick={e => search(tag.name)}>{tag.name}</a></li>))}
                                             </ul>
                                         </div>
                                         <div className="col-sm-6">
                                             <ul className="list-unstyled mb-0">
-                                                {tags.filter((_, i) => i % 2 === 1).map(tag => (<li><a key={`tag-${tag.key}`} href='#!' onClick={e => setSearchText(tag.name)}>{tag.name}</a></li>))}
+                                                {tags.filter((_, i) => i % 2 === 1).map(tag => (<li><a key={`tag-${tag.key}`} href='#!' onClick={e => search(tag.name)}>{tag.name}</a></li>))}
                                             </ul>
                                         </div>
                                     </div>
