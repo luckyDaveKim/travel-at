@@ -8,7 +8,7 @@ import {range} from 'lodash'
 
 import ItemCard from "@/components/ItemCard";
 
-import japanImage from "/public/assets/japan/japan.png"
+import japanImage from "/public/assets/japan/japan.jpg"
 
 const maxItemSizeByPage = 12;
 
@@ -21,24 +21,27 @@ class Tag {
 
 const TAGS = {
     donky: new Tag('donky', '돈키호테'),
+    goods: new Tag('goods', '잡화'),
     fashion: new Tag('fashion', '패션'),
     jelly: new Tag('jelly', '젤리'),
     snack: new Tag('snack', '과자'),
     cooking: new Tag('cooking', '요리'),
-    alcohol: new Tag('alcohol', '주류')
+    alcohol: new Tag('alcohol', '주류'),
+    devices: new Tag('devices', '전자기기'),
 }
 const tags = Object.values(TAGS).sort((a, b) => a.name < b.name ? -1 : 1);
 
 const DATA = [
-    {name: '곤약 젤리', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item1.png'), blur: true, tags: [TAGS.donky, TAGS.jelly]},
-    {name: '부르봉 알포트 초코', price: '¥299', star: 5, imageSrc: require('@/public/assets/japan/donki/item2.png'), blur: true, tags: [TAGS.donky, TAGS.snack]},
-    {name: '부르봉 루만도', price: '¥279', star: 5, imageSrc: require('@/public/assets/japan/donki/item3.png'), blur: true, tags: [TAGS.donky, TAGS.snack]},
-    {name: '파이노미', price: '¥239', star: 5, imageSrc: require('@/public/assets/japan/donki/item4.png'), blur: true, tags: [TAGS.donky, TAGS.snack]},
-    {name: '랑그리', price: '¥179', star: 5, imageSrc: require('@/public/assets/japan/donki/item5.png'), blur: true, tags: [TAGS.donky, TAGS.snack]},
-    {name: '푸딩 젤리', price: '¥203', star: 5, imageSrc: require('@/public/assets/japan/donki/item6.png'), blur: true, tags: [TAGS.donky, TAGS.jelly]},
-    {name: '크리미 치즈', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item7.png'), blur: true, tags: [TAGS.donky, TAGS.snack]},
-    {name: 'S&B 골든 카레', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item8.png'), blur: true, tags: [TAGS.donky, TAGS.cooking]},
-    {name: '산토리 위스키', price: '¥1,500', star: 5, imageSrc: require('@/public/assets/japan/donki/item9.png'), blur: true, tags: [TAGS.donky, TAGS.alcohol]},
+    {name: '곤약 젤리', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item1.jpg'), blur: true, tags: [TAGS.donky, TAGS.jelly]},
+    {name: '부르봉 알포트 초코', price: '¥299', star: 5, imageSrc: require('@/public/assets/japan/donki/item2.jpg'), blur: true, tags: [TAGS.donky, TAGS.snack]},
+    {name: '부르봉 루만도', price: '¥279', star: 5, imageSrc: require('@/public/assets/japan/donki/item3.jpg'), blur: true, tags: [TAGS.donky, TAGS.snack]},
+    {name: '파이노미', price: '¥239', star: 5, imageSrc: require('@/public/assets/japan/donki/item4.jpg'), blur: true, tags: [TAGS.donky, TAGS.snack]},
+    {name: '랑그리', price: '¥179', star: 5, imageSrc: require('@/public/assets/japan/donki/item5.jpg'), blur: true, tags: [TAGS.donky, TAGS.snack]},
+    {name: '푸딩 젤리', price: '¥203', star: 5, imageSrc: require('@/public/assets/japan/donki/item6.jpg'), blur: true, tags: [TAGS.donky, TAGS.jelly]},
+    {name: '크리미 치즈', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item7.jpg'), blur: true, tags: [TAGS.donky, TAGS.snack]},
+    {name: 'S&B 골든 카레', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item8.jpg'), blur: true, tags: [TAGS.donky, TAGS.cooking]},
+    {name: '산토리 위스키', price: '¥1,500', star: 5, imageSrc: require('@/public/assets/japan/donki/item9.jpg'), blur: true, tags: [TAGS.donky, TAGS.alcohol]},
+    {name: '월드 트레블 어댑터 키트', price: '¥4,780', imageSrc: require('@/public/assets/japan/goods/apple-world-travel-adapter-kit.jpg'), blur: true, tags: [TAGS.goods, TAGS.devices]},
     {name: '샤넬', imageSrc: require('@/public/assets/japan/fashion/chanel.svg'), blur: false, tags: [TAGS.fashion]},
     {name: '셀린느', imageSrc: require('@/public/assets/japan/fashion/celine.svg'), blur: false, tags: [TAGS.fashion]},
     {name: '비비안 웨스트우드', imageSrc: require('@/public/assets/japan/fashion/vivienne-westwood.svg'), blur: false, tags: [TAGS.fashion]},
@@ -109,6 +112,16 @@ export default function Page() {
                                     <p>선물용 인기 기념품부터 생활용품까지 꼭 사야 할 추천템 소개</p>
                                     <Link className="text-decoration-none" href="/japan/donki">
                                         돈키호테 추천 상품 보기
+                                        <i className="bi bi-arrow-right"></i>
+                                    </Link>
+                                </div>
+                                <div className="col mb-5 h-100">
+                                    <div className="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i
+                                        className="bi bi-gift"></i></div>
+                                    <h2 className="h5 fw-bolder">잡화</h2>
+                                    <p>일본에서만 만날 수 있는 생활 소품과 인테리어 용품! 일상을 특별하게 만들어줄 독특한 잡화 아이템 소개</p>
+                                    <Link className="text-decoration-none" href="/japan/goods">
+                                        잡화 추천 상품 보기
                                         <i className="bi bi-arrow-right"></i>
                                     </Link>
                                 </div>

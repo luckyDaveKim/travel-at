@@ -3,15 +3,7 @@ import Navigation from "@/components/Navigation";
 
 export default function Page() {
     const data = [
-        {name: '곤약 젤리', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item1.jpg')},
-        {name: '부르봉 알포트 초코', price: '¥299', star: 5, imageSrc: require('@/public/assets/japan/donki/item2.jpg')},
-        {name: '부르봉 루만도', price: '¥279', star: 5, imageSrc: require('@/public/assets/japan/donki/item3.jpg')},
-        {name: '파이노미', price: '¥239', star: 5, imageSrc: require('@/public/assets/japan/donki/item4.jpg')},
-        {name: '랑그리', price: '¥179', star: 5, imageSrc: require('@/public/assets/japan/donki/item5.jpg')},
-        {name: '푸딩 젤리', price: '¥203', star: 5, imageSrc: require('@/public/assets/japan/donki/item6.jpg')},
-        {name: '크리미 치즈', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item7.jpg')},
-        {name: 'S&B 골든 카레', price: '¥259', star: 5, imageSrc: require('@/public/assets/japan/donki/item8.jpg')},
-        {name: '산토리 위스키', price: '¥1,500', star: 5, imageSrc: require('@/public/assets/japan/donki/item9.jpg')}
+        {name: '월드 트레블 어댑터 키트', price: '¥4,780', imageSrc: require('@/public/assets/japan/goods/apple-world-travel-adapter-kit.jpg')}
     ];
 
     return (
@@ -20,7 +12,7 @@ export default function Page() {
             <header className="bg-dark py-3">
                 <div className="container px-4 px-lg-5 my-3">
                     <div className="text-center text-white">
-                        <h1 className="display-4 fw-bolder">돈키호테</h1>
+                        <h1 className="display-4 fw-bolder">잡화</h1>
                     </div>
                 </div>
             </header>
@@ -32,11 +24,9 @@ export default function Page() {
                             <div className="card bg-light border-0 h-100">
                                 <div className="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                     <div className="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i
-                                        className="bi bi-ticket-perforated"></i></div>
-                                    <h2 className="fs-4 fw-bold">할인 쿠폰 적용 방법</h2>
-                                    <p>카카오톡에서 '돈키쿠폰' 친구 추가하고 5% 할인쿠폰을 바로 받아보세요!</p>
-                                    <a className="btn btn-outline-primary btn-sm" href="https://pf.kakao.com/_vsLxnxj"
-                                       target="_blank">할인 쿠폰 받기</a>
+                                        className="bi bi-info-circle"></i></div>
+                                    <h2 className="fs-4 fw-bold">특별 상품</h2>
+                                    <p>일본에서 만날 수 있는 독특한 소품과 인테리어 용품을 저렴하게 구매할 절호의 기회!</p>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +35,7 @@ export default function Page() {
                 <div className="container px-4 px-lg-5 mt-5">
                     <div className="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                         {data.map((item) => (
-                            <ItemCard key={`item-card-${item.name}`} name={item.name} price={item.price} star={item.star}
+                            <ItemCard key={`item-card-${item.name}`} name={item.name} price={item.price}
                                       imageSrc={item.imageSrc} blur={true} />
                         ))}
                     </div>
